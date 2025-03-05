@@ -1,55 +1,79 @@
 body {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Esto es como elegir el tipo de letra, como cuando eliges cómo quieres que se vean las palabras en un libro. */
-    color: #333333; /* Esto es el color de las letras, como un gris oscurito. */
-    margin: 0; /* Esto quita el espacio extra alrededor de la página. */
-    padding: 0; /* Esto también quita espacio extra, pero por dentro. */
-    background-color: #f0f0f0; /* Esto es el color de fondo de la página, como un gris clarito. */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
 }
 
 header {
-    background-color: #ffffff; /* Esto es el color de fondo de la parte de arriba de la página, que es blanco. */
-    color: #333333; /* Esto es el color de las letras en la parte de arriba, gris oscurito otra vez. */
-    padding: 10px 0; /* Esto le da un poco de espacio arriba y abajo al texto. */
-    text-align: center; /* Esto pone el texto en el medio de la página. */
+    background-color: #ffffff;
+    color: #333333;
+    padding: 10px 0;
+    text-align: center;
 }
 
 .feed-container {
-    display: flex; /* Esto hace que las cosas dentro se pongan una debajo de la otra, como bloques. */
-    flex-direction: column; /* Esto hace que los bloques vayan en una columna, uno encima del otro. */
-    align-items: center; /* Esto pone los bloques en el medio de la página. */
-    gap: 15px; /* Esto deja un espacio entre cada bloque. */
-    padding: 20px; /* Esto le da un poco de espacio alrededor de todos los bloques. */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
 }
 
 .feed-item {
-    width: 500px; /* Esto hace que cada bloque tenga un ancho de 500 pixeles, como medir con una regla. */
-    background-color: #ffffff; /* Esto es el color de fondo de cada bloque, que es blanco. */
-    border-radius: 15px; /* Esto hace que las esquinas de los bloques sean redonditas. */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Esto le pone una sombra al bloque, como si estuviera un poquito levantado. */
-    padding: 10px; /* Esto le da un poco de espacio dentro de cada bloque. */
-    text-align: center; /* Esto pone el texto en el medio del bloque. */
+    width: 500px; /* Tamaño fijo para pantallas grandes */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
 }
 
 .feed-item img {
-    width: 100%; /* Esto hace que las fotos dentro del bloque ocupen todo el ancho. */
-    border-radius: 10px; /* Esto hace que las esquinas de las fotos sean redonditas. */
+    width: 100%;
+    border-radius: 10px;
 }
 
 .feed-item h3 {
-    margin: 10px 0 5px; /* Esto le da un poco de espacio arriba y abajo al título. */
-    font-size: 16px; /* Esto es el tamaño de las letras del título, un poquito más grande. */
+    margin: 10px 0 5px;
+    font-size: 16px;
 }
 
 .feed-item p {
-    font-size: 14px; /* Esto es el tamaño de las letras del texto, un poquito más chiquito. */
-    color: #666; /* Esto es el color del texto, un gris más clarito. */
+    font-size: 14px;
+    color: #666;
 }
 
 .feed-item-video {
-    width: 500px; /* Esto hace que el bloque del video tenga un ancho de 500 pixeles también. */
-    background-color: #ffffff; /* Esto es el color de fondo del bloque del video, blanco otra vez. */
-    border-radius: 15px; /* Esto hace que las esquinas del bloque del video sean redonditas. */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Esto le pone una sombra al bloque del video también. */
-    padding: 10px; /* Esto le da un poco de espacio dentro del bloque del video. */
-    text-align: center; /* Esto pone el texto en el medio del bloque del video. */
+    width: 500px; /* Tamaño fijo para pantallas grandes */
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    text-align: center;
+}
+
+/* Media Queries para adaptar el diseño a pantallas más pequeñas */
+
+/* Para tablets (pantallas de hasta 768px de ancho) */
+@media (max-width: 768px) {
+    .feed-item, .feed-item-video {
+        width: 80%; /* Hacemos que los bloques ocupen el 80% del ancho de la pantalla */
+    }
+}
+
+/* Para móviles (pantallas de hasta 480px de ancho) */
+@media (max-width: 480px) {
+    .feed-item, .feed-item-video {
+        width: 95%; /* Hacemos que los bloques ocupen casi todo el ancho de la pantalla */
+    }
+
+    .feed-item h3 {
+        font-size: 14px; /* Hacemos el título un poquito más pequeño */
+    }
+
+    .feed-item p {
+        font-size: 12px; /* Hacemos el texto un poquito más pequeño */
+    }
 }
