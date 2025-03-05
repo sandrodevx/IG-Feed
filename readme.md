@@ -1,3 +1,5 @@
+https://sandrodevx.github.io/IG-Feed/
+
 # IG Feed
 
 Este proyecto es una réplica simple de un **feed de Instagram** utilizando **HTML** y **CSS**. El objetivo de este proyecto es practicar la creación de una interfaz similar a la de Instagram, centrada en mostrar imágenes y contenido en un formato de cuadrícula, con un diseño responsivo para adaptarse a diferentes tamaños de pantalla.
