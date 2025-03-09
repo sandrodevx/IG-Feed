@@ -28,6 +28,7 @@ header {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 10px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
 }
 
 .feed-item img {
@@ -45,27 +46,30 @@ header {
     color: #666;
 }
 
-.feed-item-video {
-    width: 500px; /* Tamaño fijo para pantallas grandes */
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    text-align: center;
+/* Estilos para el estado "active" */
+.feed-item.active {
+    border: 3px solid #007BFF; /* Borde azul para resaltar */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+.feed-item.active p {
+    color: #007BFF; /* Cambiar el color del texto */
+    font-weight: bold; /* Texto en negrita */
 }
 
 /* Media Queries para adaptar el diseño a pantallas más pequeñas */
 
 /* Para tablets (pantallas de hasta 768px de ancho) */
 @media (max-width: 768px) {
-    .feed-item, .feed-item-video {
+    .feed-item {
         width: 80%; /* Hacemos que los bloques ocupen el 80% del ancho de la pantalla */
     }
 }
 
 /* Para móviles (pantallas de hasta 480px de ancho) */
 @media (max-width: 480px) {
-    .feed-item, .feed-item-video {
+    .feed-item {
         width: 95%; /* Hacemos que los bloques ocupen casi todo el ancho de la pantalla */
     }
 
